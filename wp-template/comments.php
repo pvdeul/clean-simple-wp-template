@@ -1,11 +1,3 @@
-<?php
-/**
- * Шаблон комментариев (comments.php)
- * Выводит список комментариев и форму добавления
- * @package WordPress
- * @subpackage your-clean-template
- */
-?>
 <div id="comments"> <?php // див с этим id нужен для якорьных ссылок на комменты ?>
 	<span>Всего комментариев: <?php echo get_comments_number(); // общие кол-во комментов ?></span>
 	<?php if (have_comments()) : // если комменты есть ?>

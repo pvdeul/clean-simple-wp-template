@@ -1,9 +1,4 @@
 <?php
-/**
- * Функции шаблона (function.php)
- * @package WordPress
- * @subpackage your-clean-template
- */
 
 function typical_title() { // функция вывода тайтла
 	global $page, $paged; // переменные пагинации должны быть глобыльными

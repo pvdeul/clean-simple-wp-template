@@ -1,10 +1,3 @@
-<?php
-/**
- * Шаблон шапки (header.php)
- * @package WordPress
- * @subpackage your-clean-template
- */
-?>
 <!DOCTYPE html>
 <html <?php language_attributes(); // вывод атрибутов языка ?>>
 <head>

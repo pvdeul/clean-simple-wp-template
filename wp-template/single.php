@@ -1,10 +1,4 @@
-<?php
-/**
- * Шаблон отдельной записи (single.php)
- * @package WordPress
- * @subpackage your-clean-template
- */
-get_header(); // подключаем header.php ?>
+<?php get_header(); ?>
 <section>
 <?php if ( have_posts() ) while ( have_posts() ) : the_post(); // старт цикла ?>
 	<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>> <?php // контэйнер с классами и id ?>
@@ -21,5 +15,5 @@ get_header(); // подключаем header.php ?>
 <?php next_post_link('%link', 'Следующий пост: %title ->', TRUE); // ссылка на следующий пост ?> 
 <?php if (comments_open() || get_comments_number()) comments_template('', true); // если комментирование открыто - мы покажем список комментариев и форму, если закрыто, но кол-во комментов > 0 - покажем только список комментариев ?>
 </section>
-<?php get_sidebar(); // подключаем sidebar.php ?>
-<?php get_footer(); // подключаем footer.php ?>
+<?php get_sidebar(); ?>
+<?php get_footer(); ?>
