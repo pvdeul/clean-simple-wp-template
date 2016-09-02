@@ -1,16 +1,5 @@
 <?php
 
-function typical_title() { // функция вывода тайтла
-	global $page, $paged; // переменные пагинации должны быть глобыльными
-	wp_title('|', true, 'right'); // вывод стандартного заголовка с разделителем "|"
-	//bloginfo('name'); // вывод названия сайта
-	$site_description = get_bloginfo('description', 'display'); // получаем описание сайта
-	if ($site_description && (is_home() || is_front_page())) //если описание сайта есть и мы на главной
-		echo " | $site_description"; // выводим описание сайта с "|" разделителем
-	if ($paged >= 2 || $page >= 2) // если пагинация была использована
-		echo ' | '.sprintf(__( 'Страница %s'), max($paged, $page)); // покажем номер страницы с "|" разделителем
-}
-
 register_nav_menus(array( // Регистрируем 2 меню
 	'top' => 'Верхнее', // Верхнее
 	'bottom' => 'Внизу' // Внизу
