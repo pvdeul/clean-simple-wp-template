@@ -1,22 +1,22 @@
 <?php
 
-register_nav_menus(array( // Регистрируем 2 меню
-	'top' => 'Верхнее', // Верхнее
-	'bottom' => 'Внизу' // Внизу
+register_nav_menus(array( // Регистрация меню
+	'top' => 'Верхнее',
+	'bottom' => 'Внизу'
 ));
 
-add_theme_support('post-thumbnails'); // включаем поддержку миниатюр
-set_post_thumbnail_size(250, 150); // задаем размер миниатюрам 250x150
-add_image_size('big-thumb', 400, 400, true); // добавляем еще один размер картинкам 400x400 с обрезкой
+add_theme_support('post-thumbnails'); // Включение миниатюр
+set_post_thumbnail_size(250, 150); // Размер миниатюр 250x150
+add_image_size('big-thumb', 400, 400, true); // Ещё один размер миниатюры
 
-register_sidebar(array( // регистрируем левую колонку, этот кусок можно повторять для добавления новых областей для виджитов
-	'name' => 'Колонка слева', // Название в админке
-	'id' => "left-sidebar", // идентификатор для вызова в шаблонах
-	'description' => 'Обычная колонка в сайдбаре', // Описалово в админке
-	'before_widget' => '<div id="%1$s" class="widget %2$s">', // разметка до вывода каждого виджета
-	'after_widget' => "</div>\n", // разметка после вывода каждого виджета
-	'before_title' => '<span class="widgettitle">', //  разметка до вывода заголовка виджета
-	'after_title' => "</span>\n", //  разметка после вывода заголовка виджета
+register_sidebar(array(
+	'name' => 'Колонка слева', // Название сайдбара
+	'id' => "left-sidebar", // Идентификатор
+	'description' => 'Обычная колонка в сайдбаре',
+	'before_widget' => '<div id="%1$s" class="widget %2$s">', // До виджета
+	'after_widget' => "</div>\n", // После виджета
+	'before_title' => '<span class="widgettitle">', //  До заголовка виджета
+	'after_title' => "</span>\n", //  После заголовка виджета
 ));
 
 class clean_comments_constructor extends Walker_Comment { // класс, который собирает всю структуру комментов
